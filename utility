@@ -1,0 +1,26 @@
+class learningpractice():
+    def __init__(self,name,status):
+
+        self.customer_name = name
+        self.customer_status  = status
+        try:
+            isinstance(self.customer_name,str)
+            self.customer_name = name
+        except:
+            isinstance(self.customer_name,int)
+            print("wrong Entry")
+        return(0)
+
+    def customername(self):
+        print("cu")    
+       
+    def customerstatus(self):
+        print("customer status:", self.customer_status)
+    def fulldetails(self):
+        learningpractice.customername(self)
+        learningpractice.customerstatus(self)
+inputdetails_name = input("enter name: ")
+inputdetails_status = input("enter status: ")
+input_fulldetails  = learningpractice(inputdetails_name,inputdetails_status)
+
+input_fulldetails.fulldetails()
